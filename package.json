@@ -1,0 +1,11 @@
+{
+  "name": "kimtube",
+  "version": "1.0.0",
+  "description": "kimschool youtube",
+  "main": "index.js",
+  "author": "Jongseok LEE",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
