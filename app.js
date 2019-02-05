@@ -11,6 +11,7 @@ import routes from "./routes";
 
 const app = express();
 
+app.set("view engine", "pug");
 // 유저로부터 받은 cookie를 이해하는 방법
 app.use(cookieParser());
 // 서버가 유저로부터 받은 데이터를 이해하는 방법
