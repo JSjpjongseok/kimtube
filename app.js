@@ -3,6 +3,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+import { userRouter } from "./router";
 const app = express();
 
 const handleHome = (req, res) => res.send("Hello from sex!")
@@ -20,3 +21,9 @@ app.use(morgan("dev"));
 app.get("/",handleHome);
 
 app.get("/profile", handleProfile);
+
+app.use("/user", userRouter);
+
+//누군가 내 파일을 불러올때 app object를 준다.
+//이게 제일 큰 덩어리
+export default app;
