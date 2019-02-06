@@ -4,7 +4,16 @@
 //main.pug에 pageTitle변수가 표시될 자리가 있다.
 
 export const home = (req, res) => res.render("home", { pageTitle: 'Home' });
-export const search = (req, res ) => res.render("search", { pageTitle: 'Search' });
+export const search = (req, res ) => {
+    //ES6 이전의 코딩방식
+    //const searchingBy = req.query.term;
+    //ES6 이후의 코딩방식
+    const {query:{ term : searchingBy }} = req;
+    
+    res.render("search", { pageTitle: 'Search' , searchingBy : searchingBy});
+
+}
+
 
 export const videos = (req, res ) => res.render("videos", { pageTitle: 'videos' })
 
